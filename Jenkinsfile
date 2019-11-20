@@ -8,7 +8,7 @@ pipeline {
                 bat "docker pull cmeatarun1988/selenium-docker"
             }
         }
-        stage('Execute Scripts') {
+        stage('Grid Initiation') {
             steps {
                 //sh
                 bat "docker-compose up hub chrome firefox"
