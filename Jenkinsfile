@@ -8,11 +8,5 @@ pipeline {
                 bat "docker-compose up"
             }
         }
-        stage('Grid Closure') {
-            steps {
-                //sh
-                bat "docker-compose down"
-            }
-        }
     }
 }
