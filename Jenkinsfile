@@ -11,7 +11,7 @@ pipeline {
         stage('Execute Scripts') {
             steps {
                 //sh
-                bat "docker-compose up hub chrome firefox"
+                bat "docker-compose up localhost chrome firefox"
             }
         }
     }
