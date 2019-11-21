@@ -21,6 +21,7 @@ services:
     image: cmeatarun1988/selenium-docker
     depends_on:
       - firefox
+      - hub
     environment:
       - BROWSER=chrome
       - HUB_HOST=hub
@@ -31,6 +32,7 @@ services:
     image: cmeatarun1988/selenium-docker
     depends_on:
       - chrome
+      - hub
     environment:
       - BROWSER=chrome
       - HUB_HOST=hub
