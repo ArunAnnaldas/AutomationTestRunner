@@ -8,10 +8,22 @@ pipeline {
                 bat "docker pull cmeatarun1988/selenium-docker"
             }
         }
-        stage('Execute Scripts') {
+        stage('Bring GRID up') {
             steps {
                 //sh
-                bat "docker-compose up"
+                bat "docker-compose up -d hub chrome firefox"
+            }
+        }
+        stage('Execute scripts') {
+            steps {
+                //sh
+                bat "docker-compose search-module book-flight-module"
+            }
+        }
+        stage('Bring GRID down') {
+            steps {
+                //sh
+                bat "docker-compose down"
             }
         }
     }
