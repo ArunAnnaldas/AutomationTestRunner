@@ -17,7 +17,7 @@ pipeline {
         stage('Execute scripts') {
             steps {
                 //sh
-                bat "docker-compose search-module book-flight-module"
+                bat "docker-compose up search-module book-flight-module"
             }
         }
         stage('Bring GRID down') {
