@@ -27,7 +27,7 @@ services:
       - HUB_HOST=hub
       - MODULE=search-module.xml
     volumes:
-      - ./search-result:/usr/share/workspace/test-output
+      - ./output/search-result:/usr/share/workspace/test-output
   book-flight-module:
     image: cmeatarun1988/selenium-docker
     depends_on:
@@ -38,4 +38,4 @@ services:
       - HUB_HOST=hub
       - MODULE=bookFlight-module.xml
     volumes:
-      - ./book-result:/usr/share/workspace/test-output
+      - ./output/book-result:/usr/share/workspace/test-output
