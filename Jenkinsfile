@@ -8,16 +8,10 @@ pipeline {
                 bat "docker pull cmeatarun1988/selenium-docker"
             }
         }
-        stage('Grid Initiation') {
-            steps {
-                //sh
-                bat "docker-compose up hub chrome firefox"
-            }
-        }
         stage('Execute Scripts') {
             steps {
                 //sh
-                bat "docker-compose up search-module book-flight-module"
+                bat "docker-compose up"
             }
         }
     }
